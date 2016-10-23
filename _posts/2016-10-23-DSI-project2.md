@@ -4,6 +4,8 @@ title: Charts about charts, oh my!
 ---
 
 <img align="right" src="https://ga-shop-production-herokuapp-com.global.ssl.fastly.net/assets/images/apple-touch-icon_Zb6Ub.png">
+
+
 ### A Data Science project
 
 #### Week 2 of the Data Science Immersive programme
