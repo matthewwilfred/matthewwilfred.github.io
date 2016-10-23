@@ -117,7 +117,7 @@ Note also that while Latin (in purple) is not in the top 3 most popular genres, 
 
 ![_config.yml](../images/Dashboard 4.png)
 
-An interesting feature of this dataset is that we can extract information to find out how long individual artists stayed in the Top 100 chart_. While no artist was able to remain in Top 100 for the entire duration of 76 weeks, a handful shown in the top chart lasted more than 35 weeks, with Creed topping out in terms of __chart persistence__ with 65 weeks in the Top 100 before falling off. By contrast, at the bottom rung there were artists who only appeared on the list for one week. 
+An interesting feature of this dataset is that we can extract information to find out how long individual artists stayed in the Top 100 char. While no artist was able to remain in Top 100 for the entire duration of 76 weeks, a handful shown in the top chart lasted more than 35 weeks, with Creed topping out in terms of __chart persistence__ with 65 weeks in the Top 100 before falling off. By contrast, at the bottom rung there were artists who only appeared on the list for one week. 
 
 Also noteworthy is that, comparing with the first chart shown, __the set of artists who have longest chart persistence do not overlap significantly with those who created the most Top 10 songs__.
 
@@ -148,5 +148,16 @@ One last feature of the line chart bears mentioning: __the bottom right hand cor
 
 ### Conclusions
 
-placeholder text
+We started out this project asking about two questions, the first of which was:
 
+#### 1. Were the songs in the Top 100 chart dominated by a few artists in '99-'00?
+
+Now we can confidently say that while individual artists did not dominate the charts in terms of chart appearances, certain genres did, with Rock leading the pack by a long stretch, with Country and Rap some distance behind and the remaining genres trailing off. Jazz and Latin presented interesting features in the data that deserved mention.
+
+While lacking in terms of song numbers, we did see some artists with staying power in the charts. Creed and Lonestar were neck and neck at a whopping 60+ consecutive weeks, all the while not being particularly prolific artists otherwise according to the dataset, which goes to show that making it to the top, and grinding it out for the long haul aren’t really the same things.
+
+Another visualisation showed how some genres really are better than the others. Once more leading the pack were Country, Rock and Rap for persistence in the charts. If you were a music industry executive in 1999, you would have done well pouring money into these types of artists. Which brings us to the second point…
+
+#### 2. Follow-up: Does all that hold true today?
+
+…and that’s a question for another day!
