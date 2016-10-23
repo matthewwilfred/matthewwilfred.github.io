@@ -9,11 +9,11 @@ title: Charts about charts, oh my!
 
 ### So what are we looking at here?
 
-The dataset we’re dealing with contains __Top 100 chart ranking__ data on 317 songs from the period of June 1999 to December 2000 spanning 76 weeks. In addition to basic information about each song such as its artist, track name, song length and genre, the dataset also __tracks chart position over time__ measured in units of weeks, including when it entered the chart and the time of peaking.
+The dataset we’re dealing with contains __Top 100 chart ranking__ data on 317 songs from the period of June 1999 to December 2000 spanning 76 weeks. In addition to basic information about each song such as its artist, track name, song length and genre, the dataset also tracks chart position over time measured in units of weeks, including when it entered the chart and the time of peaking.
 
-There are a __large number of NaNs__ in the weekly chart ranking columns. It can be reasonable assumed that it indicates a song falling out of Top 100. These NaNs will have to be suitably handled during data cleaning.
+There are a large number of NaNs in the weekly chart ranking columns. It can be reasonable assumed that it indicates a song falling out of Top 100. These NaNs will have to be suitably handled during data cleaning.
 
-Furthermore, this table is very __wide__ due to the way it organises the weekly rank information by column. The use of pivot tables and melting will be useful for consolidating that information.
+Furthermore, this table is very wide due to the way it organises the weekly rank information by column. The use of pivot tables and melting will be useful for consolidating that information.
 
 ### Problem Statement
 
@@ -39,7 +39,7 @@ As the underlying factors that influence music production, promotion and consump
 
 ### Approaching the problem
 
-We can approach problem statement 1 by looking at __artist popularity__ in a number of different ways, mainly by investigating the __distribution of__:
+We can approach problem statement 1 by looking at __artist popularity__ in a number of different ways, mainly by investigating the distribution of:
 
 1. number of songs by artist that appeared in the Top 100
 2. ranking achieved by these songs
@@ -47,9 +47,9 @@ We can approach problem statement 1 by looking at __artist popularity__ in a num
 
 Data visualisation is essential to see if any of the three elements are affected by outsize influences of a small number of artists, or not. For item 1, a __treemap__ can be very useful because it displays interval measurements well by linking the area of blocks with the magnitude of measurements.
 
-Regarding item 2, a full investigation can involve following __individual song ranks or artist's songs ranks__, with the latter being additionally characterisable by highest rank, lowest rank, median rank, standard deviation and other statistical measures for a grouping of songs. A simple table with __coloured-in cells for heat values__ can be an effective visualisation tool for simple measures of rank, and perhaps candlestick charts for better visualisation of data distribution.
+Regarding item 2, a full investigation can involve following individual song ranks or artist's songs ranks, with the latter being additionally characterisable by highest rank, lowest rank, median rank, standard deviation and other statistical measures for a grouping of songs. A simple table with __coloured-in cells for heat values__ can be an effective visualisation tool for simple measures of rank, and perhaps candlestick charts for better visualisation of data distribution.
 
-To tackle item 3, we can track chart persistence by visualising __changes in rank over time__. Plotting a __time series__ line chart of median rank can be an effective means to screen out extreme outliers in ranking; though it is arguably more important to look at top ranks, because those are likely to be the greatest drivers of revenue. An additional tool can again be candlestick charts to visualise the distribution of ranks.
+To tackle item 3, we can track chart persistence by visualising changes in rank over time. Plotting a __time series__ line chart of median rank can be an effective means to screen out extreme outliers in ranking; though it is arguably more important to look at top ranks, because those are likely to be the greatest drivers of revenue. An additional tool can again be candlestick charts to visualise the distribution of ranks.
 
 Looking at __genre popularity__ is just as important, for which the above methods apply, but generalised to an entire genre of music as opposed to just one artist.
 
@@ -101,21 +101,21 @@ The cleaned DataFrame and the melted pivot table from the last code block were l
 
 ![_config.yml](../images/Dashboard 1.png)
 
-Based on the histogram on the left of __number of appearances on Top 100 by genre__, a __Pareto-like distribution__ of popularity emerges as divided by genre, with __3 most popular genres__:
+Based on the histogram on the left of number of appearances on Top 100 by genre, a __Pareto-like distribution__ of popularity emerges as divided by genre, with 3 most popular genres:
 
 1. Rock
 2. Country
 3. Rap
 
-Looking to the treemaps on the right, although the above genres clearly dominate, the __number of songs per artist__ that made it into __Top 10__ and __Top 100__ seems to be much more evenly distributed. __Most artists only had one Top 100 song__, and even the most prolific and popular artists have __at most five songs in Top 100__. 
+Looking to the treemaps on the right, although the above genres clearly dominate, the number of songs per artist that made it into Top 10 and Top 100 seems to be much more evenly distributed. __Most artists only had one Top 100 song__, and even the most prolific and popular artists have __at most five songs in Top 100__. 
 
-Note also that while __Latin (in purple)__ is not in the top 3 most popular genres, it has an outsize influence in terms of __number of Top 10 tracks__ as shown in the upper right hand chart, coming in just behind Rock and Rap and ahead of Country.
+Note also that while Latin (in purple) is not in the top 3 most popular genres, it has an outsize influence in terms of number of Top 10 tracks as shown in the upper right hand chart, coming in just behind Rock and Rap and ahead of Country.
 
 #### 2. Long-lasting artists
 
 ![_config.yml](../images/Dashboard 4.png)
 
-An interesting feature of this dataset is that we can extract information to find out __how long individual artists stayed in the Top 100 charts__. While no artist was able to remain in Top 100 for the entire duration of 76 weeks, a handful shown in the top chart lasted more than 35 weeks, with Creed topping out in terms of __chart persistence__ with 65 weeks in the Top 100 before falling off. By contrast, at the bottom rung there were artists who only appeared on the list for one week. 
+An interesting feature of this dataset is that we can extract information to find out how long individual artists stayed in the Top 100 chart_. While no artist was able to remain in Top 100 for the entire duration of 76 weeks, a handful shown in the top chart lasted more than 35 weeks, with Creed topping out in terms of __chart persistence__ with 65 weeks in the Top 100 before falling off. By contrast, at the bottom rung there were artists who only appeared on the list for one week. 
 
 Also noteworthy is that, comparing with the first chart shown, __the set of artists who have longest chart persistence do not overlap significantly with those who created the most Top 10 songs__.
 
@@ -128,9 +128,9 @@ The above graph uses __median chart rankings of a genre__ to show the general tr
 1. How long individual genres lasted; and
 2. How high in the rankings they climbed
 
-Looking at the colour-coded curves by genre, we see that __Country__, __Rock and Rap persisted the longest__ in charts, which is the same set of genres that were the three most popular seen in the very first graph. The median rankings of these same genres also each broke into Top 10 at one point or another, but of the three Rap only made it to the 2nd place, as shown by the table in the bottom left, while the other 2 both reach the number one spot.
+Looking at the colour-coded curves by genre, we see that Country, Rock and Rap persisted the longest in charts, which is the same set of genres that were the three most popular seen in the very first graph. The median rankings of these same genres also each broke into Top 10 at one point or another, but of the three Rap only made it to the 2nd place, as shown by the table in the bottom left, while the other 2 both reach the number one spot.
 
-We can also see that a number of genres __did not last long, falling off at fewer than 20 weeks__:
+We can also see that a number of genres did not last long, falling off at fewer than 20 weeks:
 
 - Electronica
 - __Jazz (red)__
@@ -138,9 +138,13 @@ We can also see that a number of genres __did not last long, falling off at fewe
 - R&B
 - Reggae
 
-These genres also failed to break into Top 10, with the very significant exception of __Jazz__, which spiked up in its third week but __quickly fell off the chart altogether__ by its sixth week since entering the chart. Pairing this observation with the fact that __Jazz only appeared on the charts 5 times__ throughout the entire period covered by this dataset, as shown by the first chart, indicates that while Jazz rarely appeared in the Top 100, when it did it went straight up to the top, reaching number 7 before falling back to obscurity in the space of a month.
+These genres also failed to break into Top 10, with the very significant exception of Jazz, which spiked up in its third week but quickly fell off the chart altogether by its sixth week since entering the chart. Pairing this observation with the fact that Jazz only appeared on the charts 5 times throughout the entire period covered by this dataset, as shown by the first chart, indicates that while Jazz rarely appeared in the Top 100, when it did it went straight up to the top, reaching number 7 before falling back to obscurity in the space of a month.
 
-One last feature of the line chart bears mentioning: __the bottom right hand corner is empty space__. You can imagine this area being bounded roughly by the two lines __Median Ranking = 50__ in the y-axis and __Week = 30__ in the x-axis. What this tells us is that for this dataset:
+One last feature of the line chart bears mentioning: __the bottom right hand corner is empty space__. You can imagine this area being bounded roughly by the two lines Median Ranking = 50 in the y-axis and Week = 30 in the x-axis. What this tells us is that for this dataset:
 
 - Once a song has been in the charts for more than 30 weeks, when it falls out of the top 50 it generally disappears off the Top 100 altogether.
+
+### Conclusions
+
+placeholder text
 
