@@ -1,7 +1,50 @@
 ---
 layout: post
-title: Looking at the Top 100
+title: Charts about charts, oh my!
 ---
+
+### A Data Science project
+
+#### Week 2 of the Data Science Immersive programme
+
+
+### Problem Statement
+
+#### 1. Were the songs in the Top 100 chart dominated by a few artists in '99-'00?
+
+The rationale behind posing this question can be summed up as follows:
+
+- The music industry has to devote resources and manpower to promote artists and songs.
+- If Top 100 chart songs are dominated by a few artists, the industry can pour resources into just a handful of them to maximize their audience, and by extension their economic return.
+- Conversely, if the statement were proven to not be true, then industry leaders should focus instead on casting a wide net in order to capture a greater variety of artists that appeal to more people.
+- The above logic applies equally to genres as to artists: if certain genres have an outsize popularity as reflected by the charts, then more effort should be put into promoting artists who create that genre of music.
+
+#### 2. Follow-up: Does that hold true today?
+
+The follow-up question is outside the scope of this exercise, but for future follow-up work, answering this second and more relevant question will allow us to see if the distributions of song/artist popularity and chart persistence have changed. The results of this investigation can potentially be very revealing, because a number of trends in the years between the dataset timeframe of 1999 - 2000 and the present day of 2016 have changed the music landscape beyond recognition:
+
+- The advent of Ipods, then smartphones
+- The explosive popularity of Youtube and music streaming services
+- Fall-off in popularity of traditional media, e.g. CDs, radio, TV
+- Shift from traditional to digital marketing
+
+As the underlying factors that influence music production, promotion and consumption change, it would be interesting to see if these have led to a change in the distribution of songs, artists and genres in the Top 100, not only for prosaic academical reasons, but more importantly for market research purposes that players in the music industry today will no doubt be keeping an eye on.
+
+### Approaching the problem
+
+We can approach problem statement 1 by looking at __artist popularity__ in a number of different ways, mainly by investigating the __distribution of__:
+
+1. number of songs by artist that appeared in the Top 100
+2. ranking achieved by these songs
+3. persistence in the charts
+
+Data visualisation is essential to see if any of the three elements are affected by outsize influences of a small number of artists, or not. For item 1, a __treemap__ can be very useful because it displays interval measurements well by linking the area of blocks with the magnitude of measurements.
+
+Regarding item 2, a full investigation can involve following __individual song ranks or artist's songs ranks__, with the latter being additionally characterisable by highest rank, lowest rank, median rank, standard deviation and other statistical measures for a grouping of songs. A simple table with __coloured-in cells for heat values__ can be an effective visualisation tool for simple measures of rank, and perhaps candlestick charts for better visualisation of data distribution.
+
+To tackle item 3, we can track chart persistence by visualising __changes in rank over time__. Plotting a __time series__ line chart of median rank can be an effective means to screen out extreme outliers in ranking; though it is arguably more important to look at top ranks, because those are likely to be the greatest drivers of revenue. An additional tool can again be candlestick charts to visualise the distribution of ranks.
+
+Looking at __genre popularity__ is just as important, for which the above methods apply, but generalised to an entire genre of music as opposed to just one artist.
 
 ### Comments on the dataset
 
@@ -102,40 +145,3 @@ One last feature of the line chart bears mentioning: __the bottom right hand cor
 
 - Once a song has been in the charts for more than 30 weeks, when it falls out of the top 50 it generally disappears off the Top 100 altogether.
 
-### Problem Statement
-
-#### 1. Were the songs in the Top 100 chart dominated by a few artists in '99-'00?
-
-The rationale behind posing this question can be summed up as follows:
-
-- The music industry has to devote resources and manpower to promote artists and songs.
-- If Top 100 chart songs are dominated by a few artists, the industry can pour resources into just a handful of them to maximize their audience, and by extension their economic return.
-- Conversely, if the statement were proven to not be true, then industry leaders should focus instead on casting a wide net in order to capture a greater variety of artists that appeal to more people.
-- The above logic applies equally to genres as to artists: if certain genres have an outsize popularity as reflected by the charts, then more effort should be put into promoting artists who create that genre of music.
-
-#### 2. Follow-up: Does that hold true today?
-
-The follow-up question is outside the scope of this exercise, but for future follow-up work, answering this second and more relevant question will allow us to see if the distributions of song/artist popularity and chart persistence have changed. The results of this investigation can potentially be very revealing, because a number of trends in the years between the dataset timeframe of 1999 - 2000 and the present day of 2016 have changed the music landscape beyond recognition:
-
-- The advent of Ipods, then smartphones
-- The explosive popularity of Youtube and music streaming services
-- Fall-off in popularity of traditional media, e.g. CDs, radio, TV
-- Shift from traditional to digital marketing
-
-As the underlying factors that influence music production, promotion and consumption change, it would be interesting to see if these have led to a change in the distribution of songs, artists and genres in the Top 100, not only for prosaic academical reasons, but more importantly for market research purposes that players in the music industry today will no doubt be keeping an eye on.
-
-### Approaching the problem
-
-We can approach problem statement 1 by looking at __artist popularity__ in a number of different ways, mainly by investigating the __distribution of__:
-
-1. number of songs by artist that appeared in the Top 100
-2. ranking achieved by these songs
-3. persistence in the charts
-
-Data visualisation is essential to see if any of the three elements are affected by outsize influences of a small number of artists, or not. For item 1, a __treemap__ can be very useful because it displays interval measurements well by linking the area of blocks with the magnitude of measurements.
-
-Regarding item 2, a full investigation can involve following __individual song ranks or artist's songs ranks__, with the latter being additionally characterisable by highest rank, lowest rank, median rank, standard deviation and other statistical measures for a grouping of songs. A simple table with __coloured-in cells for heat values__ can be an effective visualisation tool for simple measures of rank, and perhaps candlestick charts for better visualisation of data distribution.
-
-To tackle item 3, we can track chart persistence by visualising __changes in rank over time__. Plotting a __time series__ line chart of median rank can be an effective means to screen out extreme outliers in ranking; though it is arguably more important to look at top ranks, because those are likely to be the greatest drivers of revenue. An additional tool can again be candlestick charts to visualise the distribution of ranks.
-
-Looking at __genre popularity__ is just as important, for which the above methods apply, but generalised to an entire genre of music as opposed to just one artist.
