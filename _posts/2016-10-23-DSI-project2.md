@@ -3,17 +3,16 @@ layout: post
 title: Charts about charts, oh my!
 ---
 
+<img align="right" src="https://ga-shop-production-herokuapp-com.global.ssl.fastly.net/assets/images/apple-touch-icon_Zb6Ub.png">
 ### A Data Science project
 
 #### Week 2 of the Data Science Immersive programme
-
-<img align="right" src="https://ga-shop-production-herokuapp-com.global.ssl.fastly.net/assets/images/apple-touch-icon_Zb6Ub.png">
 
 ### So what are we looking at here?
 
 The [dataset](../datasets/billboard.csv) we’re dealing with contains __Top 100 chart ranking__ data on 317 songs from the period of June 1999 to December 2000 spanning 76 weeks. In addition to basic information about each song such as its artist, track name, song length and genre, the dataset also tracks chart position over time measured in units of weeks, including when it entered the chart and the time of peaking.
 
-![_config.yml](http://www.billboard.com/files/media/hot100-stack.svg)
+<img align=“center” src="http://www.billboard.com/files/media/hot100-stack.svg">
 
 There are a large number of NaNs in the weekly chart ranking columns. It can be reasonable assumed that it indicates a song falling out of Top 100. These NaNs will have to be suitably handled during data cleaning.
 
