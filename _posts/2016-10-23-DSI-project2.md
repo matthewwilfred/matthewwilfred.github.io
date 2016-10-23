@@ -7,6 +7,13 @@ title: Charts about charts, oh my!
 
 #### Week 2 of the Data Science Immersive programme
 
+### So what are we looking at here?
+
+The dataset we’re dealing with contains __Top 100 chart ranking__ data on 317 songs from the period of June 1999 to December 2000 spanning 76 weeks. In addition to basic information about each song such as its artist, track name, song length and genre, the dataset also __tracks chart position over time__ measured in units of weeks, including when it entered the chart and the time of peaking.
+
+There are a __large number of NaNs__ in the weekly chart ranking columns. It can be reasonable assumed that it indicates a song falling out of Top 100. These NaNs will have to be suitably handled during data cleaning.
+
+Furthermore, this table is very __wide__ due to the way it organises the weekly rank information by column. The use of pivot tables and melting will be useful for consolidating that information.
 
 ### Problem Statement
 
@@ -45,14 +52,6 @@ Regarding item 2, a full investigation can involve following __individual song r
 To tackle item 3, we can track chart persistence by visualising __changes in rank over time__. Plotting a __time series__ line chart of median rank can be an effective means to screen out extreme outliers in ranking; though it is arguably more important to look at top ranks, because those are likely to be the greatest drivers of revenue. An additional tool can again be candlestick charts to visualise the distribution of ranks.
 
 Looking at __genre popularity__ is just as important, for which the above methods apply, but generalised to an entire genre of music as opposed to just one artist.
-
-### Comments on the dataset
-
-The dataset contains __Top 100 chart ranking__ data on 317 songs from the period of June 1999 to December 2000 spanning 76 weeks. In addition to basic information about each song such as its artist, track name, song length and genre, the dataset also __tracks chart position over time__ measured in units of weeks, including when it entered the chart and the time of peaking.
-
-There are a __large number of NaNs__ in the weekly chart ranking columns. It can be reasonable assumed that it indicates a song falling out of Top 100. These NaNs will have to be suitably handled during data cleaning.
-
-Furthermore, this table is very __wide__ due to the way it organises the weekly rank information by column. The use of pivot tables and melting will be useful for consolidating that information.
 
 ### Data Munging
 
