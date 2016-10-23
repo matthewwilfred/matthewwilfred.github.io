@@ -18,11 +18,11 @@ The following code block simplifies column names:
 	# building dictionary for renaming columns
 	rename = {'artist.inverted':'artist'}
 	for i in dataset.columns:
-   	 if 'week' in i:
-    	    if len(i) == 9:
-     	       new = int(i[1:2])
-     	   else:
-     	       new = int(i[1:3])
+	    if 'week' in i:
+		if len(i) == 9:
+		    new = int(i[1:2])
+		else:
+		    new = int(i[1:3])
     	    rename.setdefault(i,new)
 
 	# renaming columns in place
@@ -57,9 +57,10 @@ The cleaned DataFrame and the melted pivot table from the last code block were l
 
 #### 1. Top Genres
 
-![](../images/Dashboard 1.png "")
+![_config.yml](../images/Dashboard 1.png)
 
 Based on the histogram on the left of __number of appearances on Top 100 by genre__, a __Pareto-like distribution__ of popularity emerges as divided by genre, with __3 most popular genres__:
+
 1. Rock
 2. Country
 3. Rap
@@ -70,7 +71,7 @@ Note also that while __Latin (in purple)__ is not in the top 3 most popular genr
 
 #### 2. Long-lasting artists
 
-![](../images/Dashboard 4.png "")
+![_config.yml](../images/Dashboard 4.png)
 
 An interesting feature of this dataset is that we can extract information to find out __how long individual artists stayed in the Top 100 charts__. While no artist was able to remain in Top 100 for the entire duration of 76 weeks, a handful shown in the top chart lasted more than 35 weeks, with Creed topping out in terms of __chart persistence__ with 65 weeks in the Top 100 before falling off. By contrast, at the bottom rung there were artists who only appeared on the list for one week. 
 
@@ -78,7 +79,7 @@ Also noteworthy is that, comparing with the first chart shown, __the set of arti
 
 #### 3. How genres fared over time
 
-![](../images/Dashboard 5.png "")
+![_config.yml](../images/Dashboard 5.png)
 
 The above graph uses __median chart rankings of a genre__ to show the general trends of individual genres over time. We can look at two parameters:
 
