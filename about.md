@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm Matthew and I'm a Data Science enthusiast! After a stint as a process chemist in the energy industry, I've decided to move into the burgeoning Data Science space in London. 
+I'm Matthew and I'm learning to be a Data Scientist! After a stint as a process chemist in the energy industry, I've decided to move into the burgeoning Data Science space in London. 
 
 You can find me most days on campus at General Assembly, London, in the Relay Building on top of Aldgate East station.
 
