@@ -3,9 +3,7 @@ layout: post
 title: Deep Learning Book Read-Along - One
 ---
 
-### Reading the Deep Learning Book
-
-##### [Available for free at deeplearningbook.org/](http://www.deeplearningbook.org/)
+##### [Available for free at deeplearningbook.org](http://www.deeplearningbook.org/)
 
 I've decided to read through this recently released book on Deep Learning by Ian Goodfellow, Yoshua Bengio and Aaron Courville. As a means of tracking my own progress, I'll be using this blog to summarise what I've read and put out links to related articles. If you like what you're reading, think about buying a copy to support the authors! It seems well on its way to becoming a classic.
 
