@@ -3,9 +3,9 @@ layout: post
 title: Deep Learning Book Read-Along - One
 ---
 
-##### [Available for free at deeplearningbook.org](http://www.deeplearningbook.org/)
+#### [Available for free at deeplearningbook.org](http://www.deeplearningbook.org/)
 
-I've decided to read through this recently released book on Deep Learning by Ian Goodfellow, Yoshua Bengio and Aaron Courville. As a means of tracking my own progress, I'll be using this blog to summarise what I've read and put out links to related articles. If you like what you're reading, think about buying a copy to support the authors! It seems well on its way to becoming a classic.
+I've decided to read through this recently released book on Deep Learning by Ian Goodfellow, Yoshua Bengio and Aaron Courville. As a means of tracking my own progress, I'll be using this blog to note down what I've read and put out links to related articles, so I'd view it as a personal, but shared sketchpad. If you like what you're reading, think about buying a copy to support the authors! It seems well on its way to becoming a classic.
 
 Without further ado, the read-along starting with [Chapter One](http://www.deeplearningbook.org/contents/intro.html):
 
@@ -21,7 +21,7 @@ _Representation learning_ is an approach where an algorithm is used to discover 
 
 The _autoencoder_ combines:
 
-- an encoder, which converts input data to a representation; and 
+- an encoder, which converts input data to a representation; and
 - a decoder, which converts the new representation back into its original format.
 
 An autoencoder can be trained such that the new representation it generates has certain desired properties while preserving as much information as possible from the original input.
@@ -34,7 +34,7 @@ Two concepts are key to DL:
 - Distributed representation of features by different neurons
 - Back-propagation for training models
 
-#### How deep is deep? 
+#### How deep is deep?
 
 Two approaches are described:
 
