@@ -21,9 +21,9 @@ For this part of my read-along, I've opted to directly report what the authors h
 
 *"A probability distribution over discrete variables may be described using a probability mass function (PMF). We typically denote probability mass functions with a capital $P$. Probability mass functions can act on many variables at the same time. Such a probability distribution over many variables is known as a joint probability distribution. P<sub>x = x, y =y</sub> denotes the probability that x = x and y = y simultaneously. We may also write P(x,y) for brevity.”*
 
-*"When working with continuous random variables, we describe probability distributions using a probability density function (PDF) rather than a probability mass function.”
+*"When working with continuous random variables, we describe probability distributions using a probability density function (PDF) rather than a probability mass function.”*
 
-“We often denote that x follows the uniform distribution on [a,b] by writing x ∼ U(a,b). We can do this with a function u(x;a,b), where a and b are the endpoints of the interval, with b > a. The “;” notation means “parametrized by”; we consider x to be the argument of the function, while a and b are parameters that define the function.”*
+*“We often denote that x follows the uniform distribution on [a,b] by writing x ∼ U(a,b). We can do this with a function u(x;a,b), where a and b are the endpoints of the interval, with b > a. The “;” notation means “parametrized by”; we consider x to be the argument of the function, while a and b are parameters that define the function.”*
 
 A note on covariance:
 
@@ -31,9 +31,9 @@ A note on covariance:
 
 #### Measure theory - continuous variables
 
-*"A proper formal understanding of continuous random variables and probability density functions requires developing probability theory in terms of a branch of mathematics known as measure theory. Measure theory is beyond the scope of this textbook, but we can briefly sketch some of the issues that measure theory is employed to resolve.”
+*"A proper formal understanding of continuous random variables and probability density functions requires developing probability theory in terms of a branch of mathematics known as measure theory. Measure theory is beyond the scope of this textbook, but we can briefly sketch some of the issues that measure theory is employed to resolve.”*
 
-“However, it is useful to understand the intuition that a set of measure zero occupies no volume in the space we are measuring. For example, within R<sup>2</sup>, a line has measure zero, while a filled polygon has positive measure. Likewise, an individual point has measure zero. Any union of countably many sets that each have measure zero also has measure zero (so the set of all the rational numbers has measure zero, for instance)."*
+*“However, it is useful to understand the intuition that a set of measure zero occupies no volume in the space we are measuring. For example, within R<sup>2</sup>, a line has measure zero, while a filled polygon has positive measure. Likewise, an individual point has measure zero. Any union of countably many sets that each have measure zero also has measure zero (so the set of all the rational numbers has measure zero, for instance)."*
 
 #### A list of probability distributions
 
@@ -49,5 +49,5 @@ Some of these will be more familiar to you than others, depending on your backgr
 
 #### Common functions
 
-- Logistic sigmoid $[0,1]$: used often to produce phi parameter for Bernoulli distributions
-- Softplus $[0, inf]$: used for producing sigma or beta parameter of normal distributions. Comes from ‘softening’ $max(0,x)$ ie. ReLU.
+- Logistic sigmoid [0,1]: used often to produce phi parameter for Bernoulli distributions
+- Softplus [0, inf]: used for producing sigma or beta parameter of normal distributions. Comes from ‘softening’ max(0,x) ie. ReLU.
