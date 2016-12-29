@@ -5,7 +5,6 @@ title: Deep Learning Book read along - 3
 
 #### [Information theory](http://www.deeplearningbook.org/contents/prob.html)
 
-{: .text-justify}
 We continue on page 73 of the book. Information theory is used to quantify the amount of information in a given signal. Its use in ML is mainly for characterising, or quantifying similarities between probability distributions. The basic intuition of information theory is that the learning of an improbable event’s occurrence is more informative than learning of a likely event occurring. The authors use this example:
 
 - the sun rose this morning
