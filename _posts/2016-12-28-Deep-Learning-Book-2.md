@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Deep Learning Book Read-Along - Two
+title: Deep Learning Book read along - 2
 ---
 
 We now dive into Part I of the book: _Applied Math and Machine Learning Basics_.
 
+{: .text-justify}
 For a summary of the mathematical notation used throughout this book, refer to [this page](http://www.deeplearningbook.org/contents/notation.html). It may be tough going for someone who is unfamiliar with the diverse areas of mathematics touched upon in this book, so wherever possible I have tried to link external resources for extra learning.
 
 #### [Linear Algebra](http://www.deeplearningbook.org/contents/linear_algebra.html)

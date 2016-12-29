@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Deep Learning Book Read-Along - Three
+title: Deep Learning Book read along - 3
 ---
 
 #### [Information theory](http://www.deeplearningbook.org/contents/prob.html)
 
+{: .text-justify}
 We continue on page 73 of the book. Information theory is used to quantify the amount of information in a given signal. Its use in ML is mainly for characterising, or quantifying similarities between probability distributions. The basic intuition of information theory is that the learning of an improbable event’s occurrence is more informative than learning of a likely event occurring. The authors use this example:
 
 - the sun rose this morning
@@ -28,4 +29,4 @@ Here I defer once more to the authors' expertise, and let their words speak for 
 
 *“These factorizations can greatly reduce the number of parameters needed to describe the distribution. This means that we can greatly reduce the cost of representing a distribution if we are able to find a factorization into distributions over fewer variables. When we represent the factorization of a probability distribution with a graph, we call it a structured probabilistic model or graphical model. Any set of nodes the are all connected to each other in the graph G is called a clique, denoted as C. The probability distribution of a configuration of random variables in a clique is a product of all the factors associated with each node, then divided by a normalising constant Z for it to sum to 1."*
 
-Let's keep this blogpost short and sweet. The next one on Numerical Methods is going to be hefty!
+Let's keep this blogpost short and sweet. The next one on Numerical Computation is going to be hefty!
