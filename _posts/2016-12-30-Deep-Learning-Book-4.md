@@ -60,10 +60,9 @@ Instead of optimising over all possible values of x for a function f(x), we may 
 The Karush-Kuhn-Tucker (KKT) approach makes use of the generalised Lagrange function to tackle constrained optimisation in a generalised way. The set S of feasible points is described by any number of equality constraints ( g(x) = 0 ) and inequality constraints ( h(x) <= 0 ). Two parameters lambda and alpha are called KKT multipliers that are applied to each constraint in the generalised Lagrangian. Unconstrained optimisation of this generalised Lagrangian has the same optimal minima as constrained optimisation of the original cost function. The optimal points of this constrained set are those which satisfy the KKT conditions, the exact formulations for which do not seem necessary at this point to be explicitly spelled out.
 
 If you find yourself scratching your head, you may find some of these links quite helpful:
-- https://en.wikipedia.org/wiki/Lagrange_multiplier
-- https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions
-- https://ocw.mit.edu/courses/mechanical-engineering/2-854-introduction-to-manufacturing-systems-fall-2010/lecture-notes/MIT2_854F10_kkt_ex.pdf
-- https://www.youtube.com/watch?v=eaKPzb11qFw
-- https://www.youtube.com/watch?v=JTTiELgMyuM
+
+- [Wikipedia article on Lagrange multipliers](https://en.wikipedia.org/wiki/Lagrange_multiplier)
+- [MIT OCW notes on KKT conditions](https://ocw.mit.edu/courses/mechanical-engineering/2-854-introduction-to-manufacturing-systems-fall-2010/lecture-notes/MIT2_854F10_kkt_ex.pdf)
+- [5 minute Youtube video on KKT](https://www.youtube.com/watch?v=JTTiELgMyuM)
 
 Small note on [stopping rules for gradient descent](http://stats.stackexchange.com/questions/33136/how-to-define-the-termination-condition-for-gradient-descent), NB the tolerance term.
