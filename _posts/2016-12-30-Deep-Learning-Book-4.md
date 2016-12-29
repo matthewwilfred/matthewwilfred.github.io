@@ -51,3 +51,19 @@ The choice of optimisation algorithms is not an exact science, because there are
 
 #### Convex optimisation algorithms
 *“Convex optimization algorithms are able to provide many more guarantees by making stronger restrictions. Convex optimization algorithms are applicable only to convex functions—functions for which the Hessian is positive semidefinite everywhere. Such functions are well-behaved because they lack saddle points and all of their local minima are necessarily global minima. However, most problems in deep learning are difficult to express in terms of convex optimization. Convex optimization is used only as a subroutine of some deep learning algorithms. Ideas from the analysis of convex optimization algorithms can be useful for proving the convergence of deep learning algorithms. However, in general, the importance of convex optimization is greatly diminished in the context of deep learning.”*
+
+#### Constrained Optimisation
+[Here](http://www.cs.toronto.edu/~hinton/csc2515/notes/lec6tutorial.pdf) is an excellent set of notes from a lecture delivered by the famous Geoffrey Hinton.
+
+Instead of optimising over all possible values of x for a function f(x), we may wish to constrain the values of x (which are then called feasible points) to some limited set S. Norm constraints (L1, L2 or otherwise) are a commonly used method to achieve this. Another approach is to hand design transformations from the original cost function f(x) to another g(x) such that the solution from unconstrained optimisation on g(x) can be mapped back into a solution within the constrained bounds of f(x).
+
+The Karush-Kuhn-Tucker (KKT) approach makes use of the generalised Lagrange function to tackle constrained optimisation in a generalised way. The set S of feasible points is described by any number of equality constraints ( g(x) = 0 ) and inequality constraints ( h(x) <= 0 ). Two parameters lambda and alpha are called KKT multipliers that are applied to each constraint in the generalised Lagrangian. Unconstrained optimisation of this generalised Lagrangian has the same optimal minima as constrained optimisation of the original cost function. The optimal points of this constrained set are those which satisfy the KKT conditions, the exact formulations for which do not seem necessary at this point to be explicitly spelled out.
+
+If you find yourself scratching your head, you may find some of these links quite helpful:
+- https://en.wikipedia.org/wiki/Lagrange_multiplier
+- https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions
+- https://ocw.mit.edu/courses/mechanical-engineering/2-854-introduction-to-manufacturing-systems-fall-2010/lecture-notes/MIT2_854F10_kkt_ex.pdf
+- https://www.youtube.com/watch?v=eaKPzb11qFw
+- https://www.youtube.com/watch?v=JTTiELgMyuM
+
+Small note on [stopping rules for gradient descent](http://stats.stackexchange.com/questions/33136/how-to-define-the-termination-condition-for-gradient-descent), NB the tolerance term.
