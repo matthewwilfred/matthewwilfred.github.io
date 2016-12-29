@@ -5,7 +5,7 @@ title: Deep Learning Book read along - 4
 
 #### [Numerical computation](http://www.deeplearningbook.org/contents/numerical.html)
 
-<p style="text-align: center">ML algorithms usually arrive at their estimates of the solution iteratively, and can be computationally intensive. There are also problems associated with representing (potentially) infinitely many real numbers on a digital computer with (relatively) limited memory and a finite number of bit patterns, namely rounding errors, which can be categorised as:
+ML algorithms usually arrive at their estimates of the solution iteratively, and can be computationally intensive. There are also problems associated with representing (potentially) infinitely many real numbers on a digital computer with (relatively) limited memory and a finite number of bit patterns, namely rounding errors, which can be categorised as:
 - Underflow: where numbers near zero are rounded to zero
 - Overflow: where large numbers are approximated as infinity or negative infinity
 
@@ -51,4 +51,3 @@ The choice of optimisation algorithms is not an exact science, because there are
 
 #### Convex optimisation algorithms
 *“Convex optimization algorithms are able to provide many more guarantees by making stronger restrictions. Convex optimization algorithms are applicable only to convex functions—functions for which the Hessian is positive semidefinite everywhere. Such functions are well-behaved because they lack saddle points and all of their local minima are necessarily global minima. However, most problems in deep learning are difficult to express in terms of convex optimization. Convex optimization is used only as a subroutine of some deep learning algorithms. Ideas from the analysis of convex optimization algorithms can be useful for proving the convergence of deep learning algorithms. However, in general, the importance of convex optimization is greatly diminished in the context of deep learning.”*
-</p>
