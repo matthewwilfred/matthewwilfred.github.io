@@ -1,69 +1,56 @@
 ---
 layout: post
-title: Deep Learning Book read along - 4
+title: Deep Learning Book read along - 5
 ---
 
-#### [Numerical computation](http://www.deeplearningbook.org/contents/numerical.html)
+#### [ML Basics](http://www.deeplearningbook.org/contents/ml.html)
 
-ML algorithms usually arrive at their estimates of the solution iteratively, and can be computationally intensive. There are also problems associated with representing (potentially) infinitely many real numbers on a digital computer with (relatively) limited memory and a finite number of bit patterns, namely rounding errors, which can be categorised as:
+A fair amount in this chapter covers the fundamentals of ML which will not all be repeated here. For those who are unfamiliar with the subject, the [Coursera module on ML delivered by Andrew Ng](https://www.coursera.org/learn/machine-learning) is highly recommended, though I personally would not spend too much time on the Octave exercises unless you were already familiar with MATLAB. I would suggest going through the video lectures to gain a high level understanding first, then do the implementations if so inclined. [Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf) is another great resource for beginners, with worked examples in the preferred programming language of many statisticians, R.
 
-- Underflow: where numbers near zero are rounded to zero
-- Overflow: where large numbers are approximated as infinity or negative infinity
+Examples of ML tasks are:
 
-The softmax function, used for multi-category classification problems, is vulnerable to either of these rounding errors. Some tricks to avoid this are:
+- Classification (with/without missing inputs)
+- Regression
+- Transcription (eg.captioning/speech recognition)
+- Machine translation
+- Structured output (vector output, eg. word2vec)
+- Anomaly detection
+- Synthesis and sampling (of datapoints)
+- Missing value Imputation
+- Denoising (generating clean example from corrupted exampled resulting from an unknown corruption process)
+- Density estimation, or probability mass function estimation: the ML algorithm learns the structure of the seen data and explicitly capture the structure of the probability distribution
 
-- adding or subtracting a scalar from the input vector
-- other implementations that calculate a similar function that yield numerically stable results
+Although ML can be broadly divided into supervised and unsupervised tasks, there are cases where they are blurred. There are cases where unsupervised ML problems can be formulated as a supervised one, and vice versa; furthermore other paradigms such as semi-supervised and reinforcement learning are under active research.
 
-Fortunately for your everyday ML/DL practitioner, these implementation problems are handled by low-level libraries that can automatically detect and stabilise numerically unstable expressions.
+As is no doubt of great familiarity to all data scientists and ML practitioners, DataFrames are an essential data structure, which in the book we learn can also be called a design matrix. As is sometimes the case with heterogeneous data, it is not always the case that everything can be neatly fitted into an m x n row by column structure; in other words not all data points can be cast into equal length vectors. To give a brief glimpse into some material covered further ahead in the book, neural network architectures such as Convolutional networks or Recurrent networks deal with this problem.
 
-#### Poor conditioning:
-This refers to functions being sensitive to small changes in its inputs. A more formal definition can be found in these nicely written articles on [Wikipedia](https://en.wikipedia.org/wiki/Condition_number) and [Wolfram's Mathworld](http://mathworld.wolfram.com/ConditionNumber.html). As a result of this sensitivity, small deviations due to rounding errors can be compounded and results in very inaccurate solutions. Gradient descent performance may also be poor if the cost function is (locally) poorly conditioned. The condition number is a quantity called the [Condition Number](http://math.stackexchange.com/questions/675474/what-is-the-practical-impact-of-a-matrixs-condition-number) describing this characteristic:
+Typically, a set of assumptions called i.i.d. assumptions are made about the training and test samples of a dataset, which is to say that they are:
 
-*“The condition number of a function with respect to an argument measures how much the output value of the function can change for a small change in the input argument. This is used to measure how sensitive a function is to changes or errors in the input, and how much error in the output results from an error in the input. A problem with a low condition number is said to be well-conditioned, while a problem with a high condition number is said to be ill-conditioned.”*
+- Independent; each data point is independent of each other
+- Identically distributed; all data points are drawn from the same probability distribution
 
-*“...it estimates worst-case loss of precision. A system is said to be singular if the condition number is infinite, and ill-conditioned if it is too large.”
-Whether or not a condition number is “too large” is very problem dependent."*
+No word so far on the book on what happens if these assumptions do not hold true.
 
-For Python and Numpy users, numpy.linalg.cond( ) is a nice method that returns the condition number of a matrix based on a specified norm.
+#### Capacity and model fitting
 
-#### Gradient-based Optimisation:
-The following terms can be used interchangeably to denote the same thing:
+Some semantics relating to over/underfitting which bear noting are introduced in the book. The representational capacity of a model is the "family of functions the learning algorithm can choose from when varying the parameters in order to reduce a training objective.” However, imperfections of the optimisation algorithm mean that its effective capacity may be less than that. If the capacity is too high for the dataset is question, the model may be prone to overfitting, and vice versa.
 
-- cost function
-- loss function
-- error function
-- objective function
-- criterion
+Model capacity can be quantified with the Vapnik-Chervonenkis (VC) dimension, which measures the capacity of a binary classifier. However, these types of measures are of limited utility for DL models because the theory behind their optimisation is at this point in time not very well developed.
 
-Optimisation involves minimising (or maximising, depending on how the function is defined) the function f(x) iteratively via an algorithm by changing x. x* is the notation used to denote the value xmin (or xmax) that has been minimised (or maximised), formally expressed as x* = arg min f(x). In practice ML algorithms cannot guarantee that the minima found is the global minima, so we compromise and settle for a reasonably low value of the function. Saddle points around flat regions of the space can be problematic.
+*"In statistical classification, Bayes error rate is the lowest possible error rate for any classifier of a random outcome (into, for example, one of two categories) and is analogous to the irreducible error."*
 
-Gradient descent is one of the algorithms for optimisation where analytical solutions do not exist, where f(x) is decreased iteratively by changing x in the direction (denoted by unit vector u) of steepest descent with the scalar epsilon (or learning rate) to control the step size.
+*"Any fixed parametric model with less than optimal capacity will asymptote to an error value that exceeds the Bayes error.  Note that it is possible for the model to have optimal capacity and yet still have a large gap between training and generalization error. In this situation, we may be able to reduce this gap by gathering more training examples.”*
 
-#### Jacobian and Hessian matrices:
-- Jacobian matrix: the matrix of all partial derivatives of a function
-- Hessian matrix: the matrix of all second partial derivatives of a function; second derivatives measure the curvature. The multivariate second derivative test can distinguish between local minima and maxima
+kNN (regression or classification) is an example of a non-parametric ML model.
 
-For cost functions that have continuous second partial derivatives, which is usually the case for DL purposes, the resulting Hessian matrix is real and symmetric and therefore can be decomposed into real eigenvalues and eigenvectors.
+#### The No Free Lunch Theorem
+The theorem states that:
 
-We can use information from the Hessian matrix to guide the search for a minima. Algorithms that use this are called second-order optimisation algorithms, of which Newton’s method is commonly used. This is contrasted with first-order optimisation algorithms such as gradient descent that use only the gradient. The problem with second-order algorithms though is they are attracted by saddle points. Second order methods often converge much more quickly, but it can be very computationally expensive to calculate and store the Hessian matrix. Generally, first order methods are preferred in practice, because they need nothing more than the value of the error function, and its gradient. Furthermore, instead of directly computing the curvature, the sequence of gradients (or first order derivatives) can be used to approximate the second order terms.
+*"When averaged over all possible data generating distributions, every classification algorithm has the same error rate when classifying previously unobserved points… No machine learning algorithm is universally any better than the other.”*
 
-The choice of optimisation algorithms is not an exact science, because there are no performance guarantees for the wide range of functions they are applicable to. Sometimes we can constrain the functions we wish to optimise to be Lipschitz continuous which is a function whose rate of change is bounded by a Lipschitz constant. (Note: There may be a relation between the Lipschitz constant and condition number but this is not stated in the book.)
+Luckily, the probability distributions that we deal with in real life is merely a subset of all possible kinds of data generating distributions, thus we can make meaningly assumptions about them and have our ML algorithms perform well on the specific tasks we design them for.
 
-#### Convex optimisation algorithms
-*“Convex optimization algorithms are able to provide many more guarantees by making stronger restrictions. Convex optimization algorithms are applicable only to convex functions—functions for which the Hessian is positive semidefinite everywhere. Such functions are well-behaved because they lack saddle points and all of their local minima are necessarily global minima. However, most problems in deep learning are difficult to express in terms of convex optimization. Convex optimization is used only as a subroutine of some deep learning algorithms. Ideas from the analysis of convex optimization algorithms can be useful for proving the convergence of deep learning algorithms. However, in general, the importance of convex optimization is greatly diminished in the context of deep learning.”*
+#### Regularisation
+An appropriate degree of regularisation (with suitable hyperparameter tuning) allows us to use a model with sufficient effective capacity while minimising the chances of overfitting. Weight decay is a means of implementing that, by modifying the cost function to include a term that forces the weights to become smaller at each iteration, unless said weight significantly reduces the error; but it is not the only regulariser that can be applied to cost functions. The goal of all regularisation is to reduce generalisation error, but not training error, of a ML model.
 
-#### Constrained Optimisation
-[Here](http://www.cs.toronto.edu/~hinton/csc2515/notes/lec6tutorial.pdf) is an excellent set of notes from a lecture delivered by the famous Geoffrey Hinton.
-
-Instead of optimising over all possible values of x for a function f(x), we may wish to constrain the values of x (which are then called feasible points) to some limited set S. Norm constraints (L1, L2 or otherwise) are a commonly used method to achieve this. Another approach is to hand design transformations from the original cost function f(x) to another g(x) such that the solution from unconstrained optimisation on g(x) can be mapped back into a solution within the constrained bounds of f(x).
-
-The Karush-Kuhn-Tucker (KKT) approach makes use of the generalised Lagrange function to tackle constrained optimisation in a generalised way. The set S of feasible points is described by any number of equality constraints ( g(x) = 0 ) and inequality constraints ( h(x) <= 0 ). Two parameters lambda and alpha are called KKT multipliers that are applied to each constraint in the generalised Lagrangian. Unconstrained optimisation of this generalised Lagrangian has the same optimal minima as constrained optimisation of the original cost function. The optimal points of this constrained set are those which satisfy the KKT conditions, the exact formulations for which do not seem necessary at this point to be explicitly spelled out.
-
-If you find yourself scratching your head, you may find some of these links quite helpful:
-
-- [Wikipedia article on Lagrange multipliers](https://en.wikipedia.org/wiki/Lagrange_multiplier)
-- [MIT OCW notes on KKT conditions](https://ocw.mit.edu/courses/mechanical-engineering/2-854-introduction-to-manufacturing-systems-fall-2010/lecture-notes/MIT2_854F10_kkt_ex.pdf)
-- [5 minute Youtube video on KKT](https://www.youtube.com/watch?v=JTTiELgMyuM)
-
-Small note on [stopping rules for gradient descent](http://stats.stackexchange.com/questions/33136/how-to-define-the-termination-condition-for-gradient-descent), NB the tolerance term.
+Here too the No Free Lunch theorem applies: no regulariser is universally better than any other. It is up to the ML practitioner to choose which one to apply as befitting the problem at hand. Fortunately, a wide variety of regularisers are applicable and effective to DL.
