@@ -6,6 +6,7 @@ title: Deep Learning Book read along - 4
 #### [Numerical computation](http://www.deeplearningbook.org/contents/numerical.html)
 
 ML algorithms usually arrive at their estimates of the solution iteratively, and can be computationally intensive. There are also problems associated with representing (potentially) infinitely many real numbers on a digital computer with (relatively) limited memory and a finite number of bit patterns, namely rounding errors, which can be categorised as:
+
 - Underflow: where numbers near zero are rounded to zero
 - Overflow: where large numbers are approximated as infinity or negative infinity
 

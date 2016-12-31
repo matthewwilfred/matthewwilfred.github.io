@@ -46,7 +46,7 @@ Both measures have their supporters, but in any case there isn’t some magic th
 #### A Brief History of Deep Learning
 (It really is brief, I promise.)
 
-Before DL was DL, a wave in academia began with the humble perceptron (1950s) went through periods of relative popularity and decline. It was variously called cybernetics, parallel distributed processing and connectionism, before it became known as artificial neural networks (ANN) and DL. While it drew and continually draws inspiration from neuroscience, including the belief that a single algorithm is responsible for all the brain functions as well as several neural network architectures, DL is its own discipline that the book describes in general terms as "a principle of learning multiple levels of composition”.
+Before DL was DL, a wave in academia that began with the humble perceptron (1950s) went through periods of relative popularity and decline. It was variously called cybernetics, parallel distributed processing and connectionism, before it became known as artificial neural networks (ANN) and DL. While it drew and continually draws inspiration from neuroscience, including the belief that a single algorithm is responsible for all the brain functions as well as several neural network architectures, DL is its own discipline that the book describes in general terms as "a principle of learning multiple levels of composition”.
 
 Without going into all the details of the intermediate incarnations:
 
