@@ -26,7 +26,7 @@ is the ground truth of the training set, and the distribution q is the predicted
 
 An aside on the topic of Bayesian statistics: the KL distribution can be used to measure the information gain going from a prior distribution to a posterior distribution.
 
-Note on terminology. In engineering circles, the principle of minimising KL Divergence can be called the Principle of Minimum Cross-Entropy or Minxent. Also, the logistic loss in a logistic regression is sometimes called cross-entropy loss.
+A note on terminology. In engineering circles, the principle of minimising KL Divergence can be called the Principle of Minimum Cross-Entropy or Minxent. Also, the logistic loss in a logistic regression is sometimes called cross-entropy loss.
 
 Minimising the KL divergence to arrive at an optimal estimator is useful because it has a known minimum value of zero, which is subtly different from MLE, which can yield a negative value for log likelihood.
 

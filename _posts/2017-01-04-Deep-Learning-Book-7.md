@@ -7,7 +7,7 @@ Third part of the chapter on [Machine Learning basics](http://www.deeplearningbo
 
 ### Supervised learning algorithms
 
-This section is intentionally kept short as I presume that you, the reader, already have a good foundation in ML before embarking on this discovery of DL. The algorithms below are good to know as background knowledge, and certainly are very valuable in real life situations for any ML practitioner, but they are not too relevant to the story of DL that is being told here.
+This section is intentionally kept briefer than is in the book as I presume that you, the reader, already have a good foundation in ML before embarking on this discovery of DL. The algorithms below are good to know as background knowledge, and certainly are very valuable in real life situations for any ML practitioner, but they are not too relevant to the story of DL that is being told here.
 
 #### Probabilistic supervised learning
 
