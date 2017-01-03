@@ -27,7 +27,7 @@ These three types of representation are not mutually exclusive.
 
 #### Principal Components Analysis
 
-PCA is a technique where data is compressed into a representation with lower dimensionality via a learned orthogonal, linear transformation that disentangles the unknown factors of variation. This is useful only if the data is a multivariate normal distribution, and that the variance contains key information relevant to the problem. The intuition is of rotating the ‘mind’s eye’ or ‘camera’ in the input space to maximise the variance along the the axes of the newly transformed space.
+PCA is a technique where data is compressed into a representation with lower dimensionality via a learned orthogonal, linear transformation that disentangles the unknown factors of variation. This is useful only if the data is a multivariate normal distribution, and that the variance contains key information relevant to the problem. The intuition is of moving and rotating the ‘mind’s eye’ or ‘camera’ in the input space to maximise the variance along the the axes of the newly transformed space.
 
 #### Stochastic Gradient Descent
 
