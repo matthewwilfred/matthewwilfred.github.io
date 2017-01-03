@@ -22,7 +22,7 @@ Examples of ML tasks are:
 
 Although ML can be broadly divided into supervised and unsupervised tasks, there are cases where they are blurred. There are cases where unsupervised ML problems can be formulated as a supervised one, and vice versa; furthermore other paradigms such as semi-supervised and reinforcement learning are under active research.
 
-As is no doubt of great familiarity to all data scientists and ML practitioners, DataFrames are an essential data structure, which in the book we learn can also be called a design matrix. As is sometimes the case with heterogeneous data, it is not always the case that everything can be neatly fitted into an m x n row by column structure; in other words not all data points can be cast into equal length vectors. To give a brief glimpse into some material covered further ahead in the book, neural network architectures such as Convolutional networks or Recurrent networks deal with this problem.
+As is no doubt of great familiarity to all data scientists and ML practitioners, DataFrames are used all the time, which in the book we learn can also be called a design matrix. As is sometimes the case with heterogeneous data, it is not always the case that everything can be neatly fitted into an m x n row by column structure; in other words not all data points can be cast into equal length vectors. To give a brief glimpse into some material covered further ahead in the book, neural network architectures such as Convolutional networks or Recurrent networks deal with this problem.
 
 Typically, a set of assumptions called i.i.d. assumptions are made about the training and test samples of a dataset, which is to say that they are:
 
