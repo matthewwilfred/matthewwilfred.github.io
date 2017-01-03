@@ -33,7 +33,7 @@ No word so far on the book on what happens if these assumptions do not hold true
 
 #### Capacity and model fitting
 
-Some semantics relating to over/underfitting which bear noting are introduced in the book. The representational capacity of a model is the "family of functions the learning algorithm can choose from when varying the parameters in order to reduce a training objective.” However, imperfections of the optimisation algorithm mean that its effective capacity may be less than that. If the capacity is too high for the dataset is question, the model may be prone to overfitting, and vice versa.
+Some semantics relating to over/underfitting which bear noting are introduced in the book. The representational capacity of a model is the "family of functions the learning algorithm can choose from when varying the parameters in order to reduce a training objective.” However, imperfections of the optimisation algorithm mean that its effective capacity may be less than that. If the capacity is too high for the dataset in question, the model may be prone to overfitting, and vice versa.
 
 Model capacity can be quantified with the Vapnik-Chervonenkis (VC) dimension, which measures the capacity of a binary classifier. However, these types of measures are of limited utility for DL models because the theory behind their optimisation is at this point in time not very well developed.
 
@@ -48,9 +48,9 @@ The theorem states that:
 
 *"When averaged over all possible data generating distributions, every classification algorithm has the same error rate when classifying previously unobserved points… No machine learning algorithm is universally any better than the other.”*
 
-Luckily, the probability distributions that we deal with in real life is merely a subset of all possible kinds of data generating distributions, thus we can make meaningly assumptions about them and have our ML algorithms perform well on the specific tasks we design them for.
+Luckily, the probability distributions that we deal with in real life is merely a subset of all possible kinds of data generating distributions, thus we can make meaningful assumptions about them and have our ML algorithms perform well on the specific tasks we design them for.
 
 #### Regularisation
 An appropriate degree of regularisation (with suitable hyperparameter tuning) allows us to use a model with sufficient effective capacity while minimising the chances of overfitting. Weight decay is a means of implementing that, by modifying the cost function to include a term that forces the weights to become smaller at each iteration, unless said weight significantly reduces the error; but it is not the only regulariser that can be applied to cost functions. The goal of all regularisation is to reduce generalisation error, but not training error, of a ML model.
 
-Here too the No Free Lunch theorem applies: no regulariser is universally better than any other. It is up to the ML practitioner to choose which one to apply as befitting the problem at hand. Fortunately, a wide variety of regularisers are applicable and effective to DL.
+Here too the No Free Lunch theorem applies: no regulariser is universally better than any other. It is up to the ML practitioner to choose which one to apply as befitting the problem at hand. Fortunately, a wide variety of regularisers are applicable and effective in DL.
