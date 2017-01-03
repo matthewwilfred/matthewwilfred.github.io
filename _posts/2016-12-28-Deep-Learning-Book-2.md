@@ -19,7 +19,7 @@ For this part of my read-along, I've opted to directly report what the authors h
 
 *"The probability mass function maps from a state of a discrete random variable to the probability of that random variable taking on that state. The probability that x = x is denoted as P(x), with a probability of 1 indicating that x = x is certain and a probability of 0 indicating that x = x is impossible. Sometimes to disambiguate which PMF to use, we write the name of the random variable explicitly: P<sub>x = x</sub>. Sometimes we define a variable first, then use ∼ notation to specify which distribution it follows later: x ∼ P(x).”*
 
-*"A probability distribution over discrete variables may be described using a probability mass function (PMF). We typically denote probability mass functions with a capital $P$. Probability mass functions can act on many variables at the same time. Such a probability distribution over many variables is known as a joint probability distribution. P<sub>x = x, y =y</sub> denotes the probability that x = x and y = y simultaneously. We may also write P(x,y) for brevity.”*
+*"A probability distribution over discrete variables may be described using a probability mass function (PMF). We typically denote probability mass functions with a capital P. Probability mass functions can act on many variables at the same time. Such a probability distribution over many variables is known as a joint probability distribution. P<sub>x = x, y =y</sub> denotes the probability that x = x and y = y simultaneously. We may also write P(x,y) for brevity.”*
 
 *"When working with continuous random variables, we describe probability distributions using a probability density function (PDF) rather than a probability mass function.”*
 
