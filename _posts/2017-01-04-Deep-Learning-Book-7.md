@@ -11,9 +11,9 @@ This section is intentionally kept briefer than is in the book as I presume that
 
 #### Probabilistic supervised learning
 
-Support Vector Machines: the kernel trick allows its optimisation to be more computationally efficient, however the cost is still high when the dataset is large. DL was in part designed to overcome this limitation.
-k Nearest Neighbours
-Decision trees
+- Support Vector Machines: the kernel trick allows its optimisation to be more computationally efficient, however the cost is still high when the dataset is large. DL was in part designed to overcome this limitation.
+- k Nearest Neighbours
+- Decision trees
 
 #### Unsupervised learning algorithms
 
