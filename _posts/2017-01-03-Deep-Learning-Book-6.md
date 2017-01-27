@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [DL Book Series - Post VI] Hyperparameters, MLE, Bayesian Statistics
+title: DL Book Series - Part VI: Hyperparameters, MLE, Bayesian Statistics
 ---
 
 Second part of the chapter on [Machine Learning basics](http://www.deeplearningbook.org/contents/ml.html).

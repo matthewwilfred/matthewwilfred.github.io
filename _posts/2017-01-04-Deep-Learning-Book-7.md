@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [DL Book Series - Post VII] PCA, SGD, Manifolds
+title: DL Book Series - Part VII: PCA, SGD, Manifolds
 ---
 
 Third part of the chapter on [Machine Learning basics](http://www.deeplearningbook.org/contents/ml.html).

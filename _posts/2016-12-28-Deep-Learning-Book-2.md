@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Machine Learning Basics
+title: DL Book Series - Part II: Machine Learning Basics
 ---
 
 We now dive into Part I of the book: _Applied Math and Machine Learning Basics_.
