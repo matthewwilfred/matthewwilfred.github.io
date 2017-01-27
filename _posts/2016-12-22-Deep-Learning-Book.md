@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Deep Learning Book - Ian Goodfellow, Yoshua Bengio, Aaron Courville
+title: The Deep Learning Book by Ian Goodfellow, Yoshua Bengio, Aaron Courville
 ---
 
 #### [Available for free at deeplearningbook.org](http://www.deeplearningbook.org/)
