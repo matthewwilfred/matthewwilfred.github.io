@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep Learning Book read along - 3
+title: [DL Book Series - Post III] Information Theory
 ---
 
 #### [Information theory](http://www.deeplearningbook.org/contents/prob.html)

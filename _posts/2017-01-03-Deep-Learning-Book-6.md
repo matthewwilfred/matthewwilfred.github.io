@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep Learning Book read along - 6
+title: [DL Book Series - Post VI] Hyperparameters, MLE, Bayesian Statistics
 ---
 
 Second part of the chapter on [Machine Learning basics](http://www.deeplearningbook.org/contents/ml.html).
@@ -24,7 +24,7 @@ The degree of dissimilarity between two probability distributions (denoted p and
 In a ML context, cross entropy is frequently used to define the loss function. The true probability distribution p
 is the ground truth of the training set, and the distribution q is the predicted value of the current model.
 
-An aside on the topic of Bayesian statistics: the KL distribution can be used to measure the information gain going from a prior distribution to a posterior distribution.
+An aside on the topic of Bayesian statistics: the KL divergence can be used to measure the information gain going from a prior distribution to a posterior distribution.
 
 A note on terminology. In engineering circles, the principle of minimising KL Divergence can be called the Principle of Minimum Cross-Entropy or Minxent. Also, the logistic loss in a logistic regression is sometimes called cross-entropy loss.
 

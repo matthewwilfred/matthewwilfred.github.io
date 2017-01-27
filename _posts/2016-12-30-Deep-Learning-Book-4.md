@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep Learning Book read along - 4
+title: [DL Book Series - Post IV] Numerical Computation
 ---
 
 #### [Numerical computation](http://www.deeplearningbook.org/contents/numerical.html)

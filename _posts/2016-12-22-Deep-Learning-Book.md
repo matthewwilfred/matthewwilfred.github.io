@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep Learning Book read along - 1
+title: The Deep Learning Book - Ian Goodfellow, Yoshua Bengio, Aaron Courville
 ---
 
 #### [Available for free at deeplearningbook.org](http://www.deeplearningbook.org/)
@@ -11,7 +11,7 @@ Without further ado, the read-along starting with [Chapter One](http://www.deepl
 
 #### What is Deep Learning?
 
-As a domain of machine learning, DL differs from the previous knowledge-based approaches to AI, which hard code human knowledge into algorithms. Instead, patterns are extracted from raw data and learned by the algorithm itself. This is true of all ML algorithms.
+As a domain of machine learning, DL differs from the previous knowledge-based approaches to AI, which hard code human knowledge into algorithms. Instead, patterns are extracted from raw data and learned by the algorithm itself. This is true of all ML algorithms. There are [five 'tribes' of Machine Learning](https://www.youtube.com/watch?v=DnAC5vangJE), of which Deep Learning belongs to the __Connectionist__ branch.
 
 DL is a subset of machine learning where computers, through learning from experience, understands the world as a hierarchy of concepts, that if shown diagrammatically would be a deep graph with many layers reaching all the way down to the simplest concepts. This is a powerful approach, because the physical world itself is similarly organised, with complex phenomena emerging from the interaction of relatively simple interactions, which was referred to as “the exceptional simplicity of physics-based functions” in [this paper](https://arxiv.org/abs/1608.08225).
 

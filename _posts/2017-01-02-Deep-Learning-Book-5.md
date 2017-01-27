@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep Learning Book read along - 5
+title: [DL Book Series - Post V] More Machine Learning
 ---
 
 #### [ML Basics](http://www.deeplearningbook.org/contents/ml.html)

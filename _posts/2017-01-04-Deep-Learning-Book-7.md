@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep Learning Book read along - 7
+title: [DL Book Series - Post VII] PCA, SGD, Manifolds
 ---
 
 Third part of the chapter on [Machine Learning basics](http://www.deeplearningbook.org/contents/ml.html).
@@ -32,6 +32,8 @@ PCA is a technique where data is compressed into a representation with lower dim
 #### Stochastic Gradient Descent
 
 SGD is an extension of the gradient descent algorithm. Its use is borne out of the fact that training on large data sets are very computationally expensive. So instead of training on all samples, we use mini batches that are drawn uniformly from the training set.
+
+[This is an incredible resource on gradient based optimisation algorithms.](http://sebastianruder.com/optimizing-gradient-descent/)
 
 #### Building a ML algorithm
 
